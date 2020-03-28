@@ -9,6 +9,9 @@ VOLUME /mnt/zen
 
 ENV ZENCONF /mnt/zen/zen.conf
 
+ARG NODE_ENV
+ENV NODE_ENV ${NODE_ENV:-development}
+
 WORKDIR /home/node/app
 RUN npm install
 
